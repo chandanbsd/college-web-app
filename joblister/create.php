@@ -20,7 +20,7 @@ if(isset($_POST['submit'])) {
     //Create Data Array
     $data = array();
     $data['job_title'] = $_POST['job_title'];
-    $data['company'] = $_POST['company'];
+    //$data['company'] = $_POST['company'];
     $data['category_id'] = $_POST['category'];
     $data['description'] = $_POST['description'];
     $data['location'] = $_POST['location'];

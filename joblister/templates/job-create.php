@@ -1,6 +1,6 @@
 <?php include 'inc/header.php'; ?>
 
-    <h2 class="page-header">Create Job Listing</h2>
+    <h2 class="page-header">Post Club Event</h2>
     <form method="post" action="create.php">
         <!-- <div class="form-group">
             <label>Company</label>
@@ -15,6 +15,11 @@
                 <?php endforeach; ?>
             </select>
         </div>
+        <div class="form-group">
+            <label>Choose Club</label>
+            <input type="text" class="form-control" name="job_title">
+        </div>
+
         <div class="form-group">
             <label>Event Title</label>
             <input type="text" class="form-control" name="job_title">
