@@ -1,1 +1,1 @@
-# php-job-lister
+# php-event-lister

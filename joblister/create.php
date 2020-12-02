@@ -12,29 +12,29 @@ if(!$_SESSION['anything'])
 <?php include_once 'config/init.php'; ?>
 
 <?php
-$job = new Job;
+$event = new event;
 
-$template = new Template('templates/job-create.php');
+$template = new Template('templates/event-create.php');
 
 if(isset($_POST['submit'])) {
     //Create Data Array
     $data = array();
-    $data['job_title'] = $_POST['job_title'];
-    //$data['company'] = $_POST['company'];
+    $data['event_title'] = $_POST['event_title'];
+    $data['club'] = $_POST['category'];
     $data['category_id'] = $_POST['category'];
     $data['description'] = $_POST['description'];
     $data['location'] = $_POST['location'];
-    $data['salary'] = $_POST['salary'];
+    $data['fee'] = $_POST['fee'];
     $data['contact_user'] = $_POST['contact_user'];
     $data['contact_email'] = $_POST['contact_email'];
 
-    if($job->create($data)){
-        redirect('index.php', 'Your job has been listed', 'success');
+    if($event->create($data)){
+        redirect('index.php', 'Your event has been listed', 'success');
     } else {
         redirect('index.php', 'Something went wrong', 'err');
     }
 }
 
-$template -> categories = $job->getCategories();
+$template -> categories = $event->getCategories();
 
 echo $template;

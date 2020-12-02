@@ -1,21 +1,22 @@
 <?php include_once 'config/init.php'; ?>
 
+
 <?php
-$job = new Job;
+$event = new event;
 
 if(isset($_POST['del_id'])){
     $del_id = $_POST['del_id'];
-    if($job->delete($del_id)){
-        redirect('index.php', 'Job Deleted', 'success');
+    if($event->delete($del_id)){
+        redirect('index.php', 'event Deleted', 'success');
     } else {
-        redirect('index.php', 'Job Not Deleted', 'error');
+        redirect('index.php', 'event Not Deleted', 'error');
     }
 }
 
-$template = new Template('templates/job-single.php');
+$template = new Template('templates/event-single.php');
 
-$job_id = isset($_GET['id']) ? $_GET['id'] : null;
+$event_id = isset($_GET['id']) ? $_GET['id'] : null;
 
-$template -> job = $job->getJob($job_id);
+$template -> event = $event->getevent($event_id);
 
 echo $template;

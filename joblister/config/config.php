@@ -10,7 +10,7 @@ define("SITE_TITLE", "BIT CLUBS PORTAL");
 $mysqlhost='localhost';
 $mysqlusername='root';
 $mysqlpassword='';
-$mysqldb='joblister';
+$mysqldb='bitclubdb';
 $conn=mysqli_connect($mysqlhost,$mysqlusername,$mysqlpassword,$mysqldb);
 
 ?>

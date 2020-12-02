@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2020 at 05:00 PM
+-- Generation Time: Dec 02, 2020 at 04:56 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `joblister`
+-- Database: `bitclubdb`
 --
 
 -- --------------------------------------------------------
@@ -37,24 +37,24 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`) VALUES
-(1, 'Business'),
-(2, 'Technology'),
-(3, 'Retail'),
-(4, 'Construction');
+(1, 'Rotaract club of BIT (RCBIT)'),
+(2, 'TEDx BIT'),
+(3, 'Voice Club'),
+(4, 'IEEE BIT');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jobs`
+-- Table structure for table `event`
 --
 
-CREATE TABLE `jobs` (
+CREATE TABLE `events` (
   `id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
-  `company` varchar(255) NOT NULL,
-  `job_title` varchar(255) NOT NULL,
+  `club` varchar(255) NOT NULL,
+  `event_title` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
-  `salary` varchar(255) NOT NULL,
+  `fee` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL,
   `contact_user` varchar(255) NOT NULL,
   `contact_email` varchar(255) NOT NULL,
@@ -91,9 +91,9 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `jobs`
+-- Indexes for table `event`
 --
-ALTER TABLE `jobs`
+ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -113,9 +113,9 @@ ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `jobs`
+-- AUTO_INCREMENT for table `event`
 --
-ALTER TABLE `jobs`
+ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --

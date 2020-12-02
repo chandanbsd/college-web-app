@@ -3,8 +3,8 @@
     <h2 class="page-header">Post Club Event</h2>
     <form method="post" action="create.php">
         <!-- <div class="form-group">
-            <label>Company</label>
-            <input type="text" class="form-control" name="company">
+            <label>Club</label>
+            <input type="text" class="form-control" name="club">
         </div> -->
         <div class="form-group">
             <label>Club Name</label>
@@ -15,14 +15,10 @@
                 <?php endforeach; ?>
             </select>
         </div>
-        <div class="form-group">
-            <label>Choose Club</label>
-            <input type="text" class="form-control" name="job_title">
-        </div>
 
         <div class="form-group">
             <label>Event Title</label>
-            <input type="text" class="form-control" name="job_title">
+            <input type="text" class="form-control" name="event_title">
         </div>
         <div class="form-group">
             <label>Description</label>
@@ -34,7 +30,7 @@
         </div>
         <div class="form-group">
             <label>Registration Fee</label>
-            <input type="text" class="form-control" name="salary">
+            <input type="text" class="form-control" name="fee">
         </div>
         <div class="form-group">
             <label>Event Co-ordinator</label>
