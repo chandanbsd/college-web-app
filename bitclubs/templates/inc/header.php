@@ -11,12 +11,18 @@
         <div class="header clearfix">
             <nav>
             <ul class="nav nav-pills pull-right">
-                <li role="presentation" style="margin-right: 10px"><a href="index.php">Home </a></li>
-                <li role="presentation" style="margin-right: 10px"><a href="create.php">Create Listing</a></li>
-                <li role="presentation" style="margin-right: 10px;"><a href="login.php">Login</a></li>
-                <li role="presentation" style="margin-right: 10px;"><a href="logout.php">Logout</a></li>
+                <li>
+               <img src="templates/inc/bitlogo.jpg">
+               </li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px"><a href="index.php">Home </a></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px"><a href="create.php">Post Event</a></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><a href="login.php">Login</a></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><a href="logout.php">Logout</a></li>
             </ul>
+
+
             </nav>
             <h3 class="text-muted"><?php echo SITE_TITLE; ?></h3>
+
         </div>
     <?php displayMessage();?>
