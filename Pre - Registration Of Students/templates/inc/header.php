@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>BIT EVENTS AND ACTIVITIES</title>
+    <title>BIT CLUBS PORTAL</title>
     <link rel = "stylesheet" href="css/journal.min.css">
     <!-- <link rel = "stylesheet" href="css/bootstrap.min.css">   -->
     <link rel = "stylesheet" href="css/styles.css">
@@ -25,4 +25,4 @@
             <h3 class="text-muted"><?php echo SITE_TITLE; ?></h3> 
 
         </div>
-  <?php displayMessage();?>
+   <?php displayMessage();?>

@@ -5,7 +5,7 @@ define("DB_USER", "root");
 define("DB_PASS", "");
 define("DB_NAME", "bitclubdb");
 
-define("SITE_TITLE", "BIT EVENTS AND ACTIVITIES");
+define("SITE_TITLE", "BIT CLUBS PORTAL");
 
 $mysqlhost='localhost';
 $mysqlusername='root';

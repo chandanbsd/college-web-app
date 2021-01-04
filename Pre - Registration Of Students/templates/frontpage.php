@@ -4,7 +4,7 @@
         <h1>Choose A Student Club</h1>
         <form method="GET action=index.php">
             <select name="category" class="form-control">
-                <option value ="0">All Categories</option>
+                <option value ="0">All Clubs</option>
                 <?php foreach($categories as $category): ?>
                     <option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
                 <?php endforeach; ?>

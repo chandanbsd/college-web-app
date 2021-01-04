@@ -7,11 +7,9 @@
     <hr>
     <p class ="lead"><?php echo $event->description; ?></p>
     <ul class = "list-group">
-        <li class="list-group-item"><strong>Category:</strong> <?php echo $event->
+        <li class="list-group-item"><strong>club:</strong> <?php echo $event->
             club; ?></li>
-
-
-        <li class="list-group-item"><strong>Fee:</strong> <?php echo $event->
+        <li class="list-group-item"><strong>fee:</strong> <?php echo $event->
             fee; ?></li>
         <li class="list-group-item"><strong>Contact Email:</strong> <?php echo $event->
             contact_email; ?></li>
@@ -20,16 +18,10 @@
 
     <a href="index.php">Go Back</a>
     <br><br><hr>
-    Registered Students
-     <div class="well">
-        <form style ="display:inline;" method="post" action="register.php">
-            <a class="btn btn-danger" style="color: white" href="registeredTable.php?category=<?php echo $event ->id?>">See List</a>
-        </form>
-    </div><hr>
     For Students
      <div class="well">
         <form style ="display:inline;" method="post" action="register.php">
-            <a class="btn btn-danger" style="color: white" href="register.php?category=<?php echo $event ->id?>">Register</a>
+            <input type="submit" class="btn btn-danger" value="Register">
         </form>
     </div><hr>
     For Co-ordinators
@@ -42,7 +34,6 @@
             <input type="submit" class="btn btn-danger" value="Delete">
         </form>
     </div>
-
 
 
 <?php include 'inc/footer.php'; ?>

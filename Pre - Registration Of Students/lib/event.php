@@ -6,20 +6,6 @@
             $this->db = new Database;
         }
 
-
-        public function getAllPostDates(){
-            $this->db->query("SELECT post_date, categories.name AS cname 
-                            FROM events
-                            INNER JOIN categories 
-                            ON events.category_id = categories.id
-                            ORDER BY post_date DESC
-                            ");
-            // Assign Result Set
-            $results = $this->db->resultSet();
-
-            return $results;
-        }
-
         // Get All events 
         public function getAllevents(){
             $this->db->query("SELECT events.*, categories.name AS cname 
@@ -103,34 +89,6 @@
             } else {
                 return false;
             }
-        }
-
-        ///myfunc to user
-         public function createU($data)
-         {
-            
-            $this->db->query("INSERT INTO registrations (usn,name,email,id) 
-            VALUES (:usn,:name,:email,:id)");
-            
-            $this->db->bind(':usn', $data['usn']);
-            $this->db->bind(':name', $data['name']);
-            $this->db->bind(':email', $data['email']);
-            $this->db->bind(':id', $data['id']);
-
-            if($this->db->execute()){
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        public function displayU($data)
-        {
-            $this->db->query("SELECT * FROM registrations ");
-            //Assign Row
-            $row = $this->db->single();
-
-            return $row;
         }
 
         //Delete event

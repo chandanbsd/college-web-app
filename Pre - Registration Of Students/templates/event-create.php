@@ -1,24 +1,20 @@
 <?php include 'inc/header.php'; ?>
 
-    <h2 class="page-header">Post Event</h2>
+    <h2 class="page-header">Post Club Event</h2>
     <form method="post" action="create.php">
         <!-- <div class="form-group">
             <label>Club</label>
             <input type="text" class="form-control" name="club">
         </div> -->
-
         <div class="form-group">
-            <label>Category Name</label>
+            <label>Club Name</label>
             <select  class="form-control" name="category">
-            <option value ="0">Choose Category
-            </option>
+            <option value ="0">Choose Club</option>
                 <?php foreach($categories as $category): ?>
                     <option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
-
-        
 
         <div class="form-group">
             <label>Event Title</label>
@@ -44,18 +40,6 @@
             <label>Contact Email</label>
             <input type="text" class="form-control" name="contact_email">
         </div>
-
-        <div class="form-group">
-            <label>Category Name</label>
-            <select  class="form-control" name="club">
-            <option value ="0">Choose Category
-            </option>
-                <?php foreach($categories as $category): ?>
-                    <option value="<?php echo $category->name; ?>"><?php echo $category->name; ?></option>
-                <?php endforeach; ?>
-            </select>
-        </div>
-
         <input type ="submit" class="btn btn-default" value="Submit" name="submit">
     </form>
 

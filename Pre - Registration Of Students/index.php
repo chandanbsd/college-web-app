@@ -10,10 +10,7 @@ $category = isset($_GET['category']) ? $_GET['category'] : null;
 if($category){
         $template->events = $event->getByCategory($category);
         $template->title = 'events In '. $event->getCategory($category)->name;
-} 
-
-
-else {
+} else {
         $template -> title = 'Latest Events';
         $template -> events = $event->getAllevents();
 }
@@ -21,5 +18,3 @@ else {
 $template -> categories = $event->getCategories();
 
 echo $template;
-
-// getAllPostDates()
