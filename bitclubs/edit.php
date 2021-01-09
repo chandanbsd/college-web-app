@@ -19,11 +19,14 @@ if(isset($_POST['submit'])) {
     //Create Data Array
     $data = array();
     $data['event_title'] = $_POST['event_title'];
-    $data['club'] = $_POST['club'];
+    // $data['club'] = $_POST['club'];
     $data['category_id'] = $_POST['category'];
+    $data['dept'] = $_POST['dept'];
+    $data['sem'] = $_POST['sem'];
+    $data['sec'] = $_POST['sec'];
     $data['description'] = $_POST['description'];
-    $data['location'] = $_POST['location'];
-    $data['fee'] = $_POST['fee'];
+    // $data['location'] = $_POST['location'];
+    // $data['fee'] = $_POST['fee'];
     $data['contact_user'] = $_POST['contact_user'];
     $data['contact_email'] = $_POST['contact_email'];
 

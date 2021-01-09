@@ -1,12 +1,12 @@
 <?php include 'inc/header.php'; ?>
 
-    <h2 class="page-header">Post Event</h2>
+    <h2 class="page-header">Student Registration to Event</h2>
     <?php
 
       $query = $_SERVER['QUERY_STRING'];
     parse_str($query, $params);
     $id = $params['category'];
-    echo "$id";
+    
     ?>
 
     <form method="post" action="register.php">
