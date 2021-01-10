@@ -1,4 +1,5 @@
 <?php include 'inc/header.php'; ?>
+<div class="jumbotron">
     <h2 class="page-header">Post Notification</h2>
     <form method="post" action="create.php">
         <!-- <div class="form-group">
@@ -53,7 +54,7 @@
 
 
 <div class="form-group">
-            <label>Semester</label>
+            <label>Section</label>
             <select  class="form-control" name="sec">
             <option value ="0">Choose Section
             </option>
@@ -116,5 +117,5 @@
  -->
         <input type ="submit" class="btn btn-primary" value="Submit" name="submit">
     </form>
-
+</div>
 <?php include 'inc/footer.php'; ?>

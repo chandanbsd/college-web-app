@@ -1,4 +1,5 @@
 <?php include 'inc/header.php'; ?>
+ <div class="jumbotron">
       <ul class = "list-group">
 
          <li class="list-group-item"><strong>Notification Type:</strong> <?php echo $event->category_id; ?></li>
@@ -42,4 +43,5 @@
             <input type="submit" class="btn btn-danger" value="Delete">
         </form>
     </div>
+</div>
 <?php include 'inc/footer.php'; ?>

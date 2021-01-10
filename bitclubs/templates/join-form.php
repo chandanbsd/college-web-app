@@ -8,7 +8,7 @@
     <link rel = "stylesheet" href="css/styles.css">
 </head>
 <body>
-
+<div class="jumbotron">
     <h2 class="page-header">Club Membership Form</h2>
     <form method="post" action="create.php">
         <!-- <div class="form-group">
@@ -46,7 +46,7 @@
         </div>
         <input type ="submit" class="btn btn-default" value="Submit" name="submit">
     </form>
-
+</div>
 <?php include 'inc/footer.php'; ?>
 </body>
 </html>

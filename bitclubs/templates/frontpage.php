@@ -64,17 +64,20 @@
       </div>
         <h3><?php echo $title; ?></h3>
       <?php foreach($events as $event) : ?>
+     <div class="jumbotron">
       <div class="row marketing">
         <div class="col-md-10">
           <h4><?php echo $event->event_title; ?></h4>
           <p><?php echo $event->description; ?></p>
-
         </div>
+    
+
         <div class="col-md-2">
             <a class="btn btn-default" href="event.php?id=<?php echo $event-> id;
             ?>">View </a>
         </div>
-      </div>
+        </div>
+   </div>
 <?php endforeach; ?>
 
 <?php include 'inc/footer.php'; ?>

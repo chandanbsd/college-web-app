@@ -56,7 +56,7 @@ if($_POST)
 
 ?>
 
-
+ <div class="jumbotron">
 <div class="container">
 <form method="POST">
   
@@ -72,5 +72,6 @@ if($_POST)
     </div>
    
 </form>
-</div></div>
+</div>
+</div>
 </body></html>

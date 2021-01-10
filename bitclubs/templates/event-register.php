@@ -1,5 +1,5 @@
 <?php include 'inc/header.php'; ?>
-
+<div class="jumbotron">
     <h2 class="page-header">Register to club</h2>
     <form method="post" action="create.php">
         <!-- <div class="form-group">
@@ -42,5 +42,5 @@
         </div>
         <input type ="submit" class="btn btn-default" value="Submit" name="submit">
     </form>
-
+</div>
 <?php include 'inc/footer.php'; ?>

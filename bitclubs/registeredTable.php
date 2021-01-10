@@ -2,11 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>BIT EVENTS AND ACTIVITIES</title>
+<title>BIT ONLINE NOTIFICATION BOARD AND EVENT REGISTRATION</title>
     <link rel = "stylesheet" href="css/journal.min.css">
     <!-- <link rel = "stylesheet" href="css/bootstrap.min.css">   -->
     <link rel = "stylesheet" href="css/styles.css">
+    <style type="text/css">
+          body{
+            background-color: #006400;
+            color: black;
+          }
+          *{
+            color: black;
+          }
+      </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header clearfix">
@@ -15,15 +25,15 @@
                 <li>
                <img src="templates/inc/bitlogo.jpg">
                </li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px"><a href="index.php">Home </a></li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px"><a href="create.php">Post Event</a></li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><a href="login.php">Login</a></li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><a href="logout.php">Logout</a></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="index.php">Home </a></button></li>
+                <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="create.php">Post Event</a></button></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="login.php">Login</a></button></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="logout.php">Logout</a></button></li>
             </ul>
 
 
             </nav>
-            <h3 class="text-muted"><?php echo SITE_TITLE; ?></h3> 
+            <h3 class="text"><?php echo SITE_TITLE; ?></h3> 
 
         </div>
 
@@ -36,6 +46,7 @@ th, td {
 </style>
 </head>
 <body>
+     <div class="jumbotron">
 <?php
 $query = $_SERVER['QUERY_STRING'];
 parse_str($query, $params);
@@ -56,7 +67,7 @@ else {
     echo "0 results";
 }
 ?>
-
+</div>
             <footer class="footer">
   <p>Project By CHANDAN B.S.D and B.K. PARITOSH</p>
       </footer>

@@ -1,4 +1,6 @@
 <?php include 'inc/header.php'; ?>
+<div class="jumbotron">
+   <div class="jumbotron">
 
     <h2 class="page-header">Student Registration to Event</h2>
     <?php
@@ -25,5 +27,6 @@
         <input type="hidden"  name="category" value="<?php echo $id ?>">
         <input type ="submit" class="btn btn-default" value="Submit" name="submit">
     </form>
-
+</div>
+</div>
 <?php include 'inc/footer.php'; ?>
