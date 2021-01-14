@@ -17,26 +17,30 @@ if($category){
         $template -> categories = $event->getCategories();
 } 
 
-if($dept){
+elseif($dept)
+{
 		$template->events = $event->getByDept($dept);
         $template->title =  'Notifications Specific to '.$event->getDept($dept)->name.' Department';
         $template -> dept = $event->getDepts();
 }
 
-if($sem){
+elseif($sem)
+{
 		$template->events = $event->getBySem($sem);
         $template->title =  'Notifications Specific to '.$event->getSem($sem)->name.' Semester';
         $template -> dept = $event->getSems();
 }
 
 
-if($sec){
+elseif($sec)
+{
 		$template->events = $event->getBySec($sec);
         $template->title =  'Notifications Specific to '.$event->getSec($sec)->name.' Section';
         $template -> dept = $event->getSecs();
 }
 
-else {
+else 
+{
         $template -> title = 'Notification';
         $template -> events = $event->getAllevents();
         $template -> categories = $event->getCategories();
