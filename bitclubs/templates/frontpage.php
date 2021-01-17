@@ -15,12 +15,13 @@
                 <div class="form-group">
                 <label>Notification Type</label>
                 <select name="category" class="form-control"> 
+                <option value ="0">Choose Type</option>
                 <!-- <option value ="0">All Notification</option>
                 <option value="1">Administrative</option>
                 <option value="2">Academic</option>
                 <option value="3">Events</option> -->
                 <?php foreach($categories as $category): ?>
-                    <option value="<?php echo $category->name;?>"><?php echo $category->name; ?></option>
+                    <option value="<?php echo $category->id;?>"><?php echo $category->name; ?></option>
                 <?php endforeach; ?> 
                 </select>
                 </div>

@@ -1,3 +1,18 @@
+
+<?php
+// first thing is to start session 
+session_start();
+// now to check if variable is true
+
+if(!$_SESSION['anything'])
+{
+    header('location:login.php');
+}
+?>
+
+<?php include_once 'config/init.php'; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +57,11 @@ body {
     padding-bottom: 20px;
   }
 
+  .btn-primary{
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
       </style>
 </head>
 
@@ -50,46 +70,43 @@ body {
     <div class="container">
         <div class="header clearfix">
             <nav>
-              <ul class="nav nav-pills pull-right" >
+            <ul class="nav nav-pills pull-right" >
                 <li style="margin-right: 10px">
-               <img src="../templates/inc/bitlogo.jpg">
+               <img src="templates/inc/bitlogo.jpg">
                </li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="../index.php">Home </a></button></li>
-                <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="downloads.php">Files</a></button></li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="../coordinator-panel.php">Coordinator Section</a></button></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="index.php">Home </a></button></li>
+                <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="file-upload-download/downloads.php">Files</a></button></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="coordinator-panel.php">Coordinator Section</a></button></li>
+            </ul>
             </nav>
             <h3 class="text">BIT ONLINE NOTIFICATION BOARD AND EVENT REGISTRATION</h3> 
 
         </div>
-<?php include 'filesLogic.php';?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="style.css">
-  <title>Download files</title>
 </head>
 <body>
  <div class="jumbotron">
 <table style="width: 100%; text-align: center;">
 <thead>
-    <th>ID</th>
-    <th>Filename</th>
-    <th>size (in mb)</th>
-    <th>Downloads</th>
-    <th>Action</th>
+    <th>Coordinators Operations</th>
 </thead>
 <tbody>
-  <?php foreach ($files as $file): ?>
-    <tr>
-      <td><?php echo $file['id']; ?></td>
-      <td><?php echo $file['name']; ?></td>
-      <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
-      <td><?php echo $file['downloads']; ?></td>
-      <td><a href="downloads.php?file_id=<?php echo $file['id'] ?>" class="btn btn-primary">Download</a></td>
+  <tr>
+      <td><a href="create.php" class="btn btn-primary">Post Notification</a></td>
     </tr>
-  <?php endforeach;?>
 
+    <tr>
+      <td><a href="file-upload-download/index.php" class="btn btn-primary">Upload Files</a></td>
+    </tr>
+    
+    
+    <tr>
+    <td><a href="logout.php" class="btn btn-primary">Logout</a></td>
+    </tr>
 </tbody>
 </table>
 </div>

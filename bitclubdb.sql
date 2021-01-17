@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2021 at 09:29 PM
+-- Generation Time: Jan 17, 2021 at 11:15 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -92,7 +92,8 @@ INSERT INTO `events` (`id`, `category_id`, `dept`, `sem`, `sec`, `event_title`, 
 (20, 'Event Notification', 'CSE', 'VII SEM', 'ALL', 'Industry Talk On Machine Learning', 'Talk by industry professional on Machine Learning Evaluation Techniques on 15th Jan 2021. ', 'HOD, CSE', 'cse.hod@bit-bangalore.edu.in', '2021-01-10 15:04:23'),
 (21, 'Administrative Notification', 'ALL', 'ALL', 'ALL', 'VTU Exam Fee Payment', 'All students are instructed to pay the VTU Fees on or before 12th January 2021. ', 'BIT CASH SECTION', 'bit.cashsection@gmail.com', '2021-01-12 14:36:35'),
 (22, 'Academic Notification', 'EEE', 'IV SEM', 'ALL', 'attend online classes', 'All students are requested to attend classes on saturday 20th Jan 2021', 'HOD', 'test@gmail.com', '2021-01-13 09:00:05'),
-(24, 'Academic Notification', 'CSE', 'VII SEM', 'ALL', 'Time table', 'Exams have been scheduled from 25th January 2021. Check the files tab for the full schedule ', 'Dr. Gunavathi H.S', 'dr.gunavathi@bit-bangalore.edu.in', '2021-01-17 19:51:51');
+(24, 'Academic Notification', 'CSE', 'VII SEM', 'ALL', 'Time table', 'Exams have been scheduled from 25th January 2021. Check the files tab for the full schedule ', 'Dr. Gunavathi H.S', 'dr.gunavathi@bit-bangalore.edu.in', '2021-01-17 19:51:51'),
+(26, 'Academic Notification', 'CSE', 'VII SEM', '0', 'Time Table For Lab Examination', 'Lab exam for the 7th semester students of Computer Science and Engineering is schedule from 25th January Onwards. Check the file section for further details. ', 'Dr. Gunavathi H.S', 'drgunavathi@bit-bangalore.edu.in', '2021-01-17 21:46:16');
 
 -- --------------------------------------------------------
 
@@ -112,8 +113,7 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`id`, `name`, `size`, `downloads`) VALUES
-(3, 'Hello.docx', 9953, 0),
-(4, 'abcd.docx', 9953, 2);
+(5, '7sem CSE Time Table.docx', 8369, 2);
 
 -- --------------------------------------------------------
 
@@ -275,13 +275,13 @@ ALTER TABLE `dept`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `sec`

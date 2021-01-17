@@ -35,37 +35,84 @@
         }
 
         //Get Categories
+        // public function getCategories(){
+        //     $this->db->query("SELECT * FROM categories");
+        //     // Assign Result Set
+        //     $results = $this->db->resultSet();
+        //     return $results;
+        // }
+
+
+        //Get events By Category
+        // public function getByCategory($category){
+        //                 $this->db->query("SELECT events.*, categories.name AS cname 
+        //                     FROM events, categories
+        //                     INNER JOIN categories 
+        //                     ON events.category_id = categories.id
+        //                     WHERE events.category_id = $category
+        //                     ORDER BY post_date DESC");
+        //             }
+
+         // Get events By Category
+        
+
+        //Get category
+        // public function getCategory($category_id){
+        //     $this->db->query("SELECT * FROM categories WHERE id = :category_id");
+        //     $this->db->bind(':category_id', $category_id);
+        //     //Assign Row
+        //     $row = $this->db->single();
+        //     return $row;
+        // }
+
+        ///////////////////////////////////////
+            // Get Categories
         public function getCategories(){
             $this->db->query("SELECT * FROM categories");
             // Assign Result Set
             $results = $this->db->resultSet();
+
             return $results;
         }
 
-
-        //Get events By Category
+        // Get Jobs By Category
         public function getByCategory($category){
-                        $this->db->query("SELECT events.*, categories.name AS cname 
-                            FROM events
-                            INNER JOIN categories 
-                            ON events.category_id = categories.name
-                            WHERE events.category_id = $category
-                            ORDER BY post_date DESC
-                            ");
+            $this->db->query("SELECT events.*, categories.name AS cname 
+                        FROM events 
+                        INNER JOIN categories
+                        ON events.category_id = categories.name 
+                        WHERE categories.id = $category
+                        ORDER BY post_date DESC 
+                        ");
             // Assign Result Set
             $results = $this->db->resultSet();
+
             return $results;
         }
 
-        //Get category
+        // Get category
         public function getCategory($category_id){
-            $this->db->query("SELECT * FROM categories WHERE name = :category_id");
+            $this->db->query("SELECT * FROM categories WHERE id = :category_id");
+
             $this->db->bind(':category_id', $category_id);
-            //Assign Row
+
+            // Assign Row
             $row = $this->db->single();
+
             return $row;
         }
 
+        public function getCategoryName($category_id){
+            $this->db->query("SELECT * FROM categories WHERE id = :category_id");
+
+            $this->db->bind(':category_id', $category_id);
+
+            // Assign Row
+            $row = $this->db->single();
+
+            return $row;
+        }
+    
 
 
 

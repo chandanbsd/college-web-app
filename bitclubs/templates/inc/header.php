@@ -7,8 +7,9 @@
     <link rel = "stylesheet" href="css/styles.css">
     <style type="text/css">
           body{
-            background-color: #006400;
+            /*background-color: #006400;*/
             color: black;
+            background-color: #64e764;
           }
           *{
             color: black;
@@ -29,12 +30,8 @@
                </li>
                 <li role="presentation" style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="index.php">Home </a></button></li>
                 <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="file-upload-download/downloads.php">Files</a></button></li>
-                <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="create.php">Post Event</a></button></li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="login.php">Login</a></button></li>
-                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="logout.php">Logout</a></button></li>
+                <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="coordinator-panel.php">Coordinator Section</a></button></li>
             </ul>
-
-
             </nav>
             <h3 class="text"><?php echo SITE_TITLE; ?></h3> 
 
