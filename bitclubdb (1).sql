@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2021 at 09:43 AM
+-- Generation Time: Jan 17, 2021 at 09:29 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -89,7 +89,31 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `category_id`, `dept`, `sem`, `sec`, `event_title`, `description`, `contact_user`, `contact_email`, `post_date`) VALUES
-(17, 'Administrative Notification', 'ALL', 'ALL', 'ALL', 'Fee Payment', 'Pay the fees for the current academic year by 12 - Jan - 2020.\r\nFailing to pay the fees will result in the student not being issued the hall ticket. ', 'Cash Section', 'cash.section@bit-bangalore.edu.in', '2021-01-09 08:11:40');
+(20, 'Event Notification', 'CSE', 'VII SEM', 'ALL', 'Industry Talk On Machine Learning', 'Talk by industry professional on Machine Learning Evaluation Techniques on 15th Jan 2021. ', 'HOD, CSE', 'cse.hod@bit-bangalore.edu.in', '2021-01-10 15:04:23'),
+(21, 'Administrative Notification', 'ALL', 'ALL', 'ALL', 'VTU Exam Fee Payment', 'All students are instructed to pay the VTU Fees on or before 12th January 2021. ', 'BIT CASH SECTION', 'bit.cashsection@gmail.com', '2021-01-12 14:36:35'),
+(22, 'Academic Notification', 'EEE', 'IV SEM', 'ALL', 'attend online classes', 'All students are requested to attend classes on saturday 20th Jan 2021', 'HOD', 'test@gmail.com', '2021-01-13 09:00:05'),
+(24, 'Academic Notification', 'CSE', 'VII SEM', 'ALL', 'Time table', 'Exams have been scheduled from 25th January 2021. Check the files tab for the full schedule ', 'Dr. Gunavathi H.S', 'dr.gunavathi@bit-bangalore.edu.in', '2021-01-17 19:51:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `files`
+--
+
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `size` int(11) NOT NULL,
+  `downloads` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`id`, `name`, `size`, `downloads`) VALUES
+(3, 'Hello.docx', 9953, 0),
+(4, 'abcd.docx', 9953, 2);
 
 -- --------------------------------------------------------
 
@@ -112,7 +136,12 @@ INSERT INTO `registrations` (`usn`, `name`, `email`, `id`) VALUES
 ('1bi17cs034', 'Chandan B S D', 'denanathchandan5@gmail.com', 0),
 ('1BI17CS034', 'Chandan B S D', 'denanathchandan5@gmail.com', 0),
 ('1BI17CS034', 'Chandan B S D', 'denanathchandan5@gmail.com', 9),
-('1bi17cs024', 'Pritosh', 'parit@gmail.com', 9);
+('1bi17cs024', 'Pritosh', 'parit@gmail.com', 9),
+('1BI17CS034', 'CHANDAN B S D', 'denanathchandan5@gmail.com', 20),
+('1BI17CS024', 'B K Paritosh', 'paritosh@gmail.com', 20),
+('1BI17CS001', 'Rahul', 'rahul@gmail.com', 20),
+('1BI17CS060', 'Poorna', 'poorna@gmail.com', 20),
+('1BI17CS024', 'Paritosh', 'pari@gmail.com', 23);
 
 -- --------------------------------------------------------
 
@@ -203,6 +232,12 @@ ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sec`
 --
 ALTER TABLE `sec`
@@ -240,7 +275,13 @@ ALTER TABLE `dept`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `sec`
