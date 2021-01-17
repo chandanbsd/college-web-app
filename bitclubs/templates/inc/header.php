@@ -13,6 +13,9 @@
           *{
             color: black;
           }
+          .container .jumbotron {
+            text-align: left;
+          }
       </style>
 </head>
 
@@ -20,11 +23,12 @@
     <div class="container">
         <div class="header clearfix">
             <nav>
-            <ul class="nav nav-pills pull-right">
-                <li>
+            <ul class="nav nav-pills pull-right" >
+                <li style="margin-right: 10px">
                <img src="templates/inc/bitlogo.jpg">
                </li>
                 <li role="presentation" style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="index.php">Home </a></button></li>
+                <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="file-upload-download/downloads.php">Files</a></button></li>
                 <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="create.php">Post Event</a></button></li>
                 <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="login.php">Login</a></button></li>
                 <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="logout.php">Logout</a></button></li>
@@ -35,4 +39,4 @@
             <h3 class="text"><?php echo SITE_TITLE; ?></h3> 
 
         </div>
-  <?php displayMessage();?>
+<?php displayMessage();?>

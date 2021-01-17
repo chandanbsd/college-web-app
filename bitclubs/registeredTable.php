@@ -26,6 +26,7 @@
                <img src="templates/inc/bitlogo.jpg">
                </li>
                 <li role="presentation" style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="index.php">Home </a></button></li>
+                <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="file-upload-download/downloads.php">Files</a></button></li>
                 <li  style="margin-top: 30px;margin-right: 10px"><button class="btn btn-dark"><a href="create.php">Post Event</a></button></li>
                 <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="login.php">Login</a></button></li>
                 <li role="presentation" style="margin-top: 30px;margin-right: 10px;"><button class="btn btn-dark"><a href="logout.php">Logout</a></button></li>
@@ -42,6 +43,9 @@
 <head>
 <style>
 th, td {
+  width: 50px;
+  border: 1px;
+  border-color: black;
 }
 </style>
 </head>
@@ -55,8 +59,9 @@ $id = $params['category'];
 $sql = "SELECT usn, name, email FROM registrations where id=$id";
 $result = $conn->query($sql);
 
+echo "<h1>Number Of Students Registered = ".$result->num_rows."</h1>";
 if ($result->num_rows > 0) {
-    echo "<table><tr><th>USN</th><th>Name</th><th>Email</th></tr>";
+    echo '<table><tr><th>USN</th><th>Name</th><th>Email</th></tr>';
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>" . $row["usn"]. "</td><td>" . $row["name"]. "</td><td>" . $row["email"]. "</td></tr>";

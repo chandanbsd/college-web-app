@@ -1,20 +1,30 @@
 <?php include 'inc/header.php'; ?>
 
-      <div class="jumbotron">
+      <div class="jumbotron" >
         <h1>Search For Notification</h1>
         <form method="GET action=index.php">
-            <!-- <select name="category" class="form-control">
+        <!--     <select name="category" class="form-control">
                 <option value ="0">Choose Type</option>
                 <option value="0">Administrative</option>
                 <option value="1">Academic</option>
                 <option value="2">Events</option>
                 <option value ="0">All Categories</option>
-                
+                 </select>
+         -->    
+                <br> 
+                <div class="form-group">
+                <label>Notification Type</label>
+                <select name="category" class="form-control"> 
+                <!-- <option value ="0">All Notification</option>
+                <option value="1">Administrative</option>
+                <option value="2">Academic</option>
+                <option value="3">Events</option> -->
                 <?php foreach($categories as $category): ?>
-                    <option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
-                 <?php endforeach; ?>
-            </select>
-            <br> -->
+                    <option value="<?php echo $category->name;?>"><?php echo $category->name; ?></option>
+                <?php endforeach; ?> 
+                </select>
+                </div>
+           
         <div class="form-group">
             <label>Department Name</label>
             <select  class="form-control" name="dept">

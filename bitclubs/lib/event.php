@@ -48,25 +48,21 @@
                         $this->db->query("SELECT events.*, categories.name AS cname 
                             FROM events
                             INNER JOIN categories 
-                            ON events.category_id = categories.id
+                            ON events.category_id = categories.name
                             WHERE events.category_id = $category
                             ORDER BY post_date DESC
                             ");
             // Assign Result Set
             $results = $this->db->resultSet();
-
             return $results;
         }
 
         //Get category
         public function getCategory($category_id){
-            $this->db->query("SELECT * FROM categories WHERE id = :category_id");
-
+            $this->db->query("SELECT * FROM categories WHERE name = :category_id");
             $this->db->bind(':category_id', $category_id);
-
             //Assign Row
             $row = $this->db->single();
-
             return $row;
         }
 
